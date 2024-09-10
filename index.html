@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Atsuko</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f9c6ff;
+        }
+        #video {
+            display: none;
+        }
+    </style>
+</head>
+<body onclick="playVideo()">
+
+    <video id="video" loop>
+        <source src="img/video_loop.mp4" type="video/mp4">
+    </video>
+
+    <script>
+        function playVideo() {
+          var video = document.getElementById("video");
+      
+          // Only play the video the first time user clicks
+          if (video.paused) {
+            video.style.display = 'block';  // Show the video
+            video.muted = false;            // Unmute the video
+            video.play();                   // Play the video
+          }
+        }
+      </script>
+    
+</body>
+</html>
