@@ -21,19 +21,18 @@
 </head>
 <body onclick="playVideo()">
 
-    <video id="video" loop>
+    <a href="https://youtube.com/shorts/BqZKw_iiH8I" target="_blank" style="cursor: default;"><video id="video" loop>
         <source src="img/video_loop.mp4" type="video/mp4">
-    </video>
+    </video></a>
 
     <script>
         function playVideo() {
           var video = document.getElementById("video");
       
-          // Only play the video the first time user clicks
           if (video.paused) {
-            video.style.display = 'block';  // Show the video
-            video.muted = false;            // Unmute the video
-            video.play();                   // Play the video
+            video.style.display = 'block';
+            video.muted = false;
+            video.play();
           }
         }
       </script>
